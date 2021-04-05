@@ -28,13 +28,13 @@ for n in range(0,10):
         #       아이폰 11 pro 골드 256G (애케플22.9.6까지) 판매합니다.
         #</span>
         #attrs 어트리뷰트들 딕셔너리{ 키:값 }
-        list = soup.findAll('span', attrs={'class':'list_subject'})
+        list = soup.find_all('span', attrs={'class':'subject_fixed'})
 
         for item in list:
                 try:
                         # print(item.text)
                         title = item.text
-                        if (re.search('아이폰', title)):
+                        if (re.search('키보드', title)):
                                 print(title.strip())
                         
                 except:

@@ -1,7 +1,8 @@
 # DemoFunction2.py
 #가변인자로 덧셈처리
 def varAdd(*ar): # *ar은 튜플이고.. 뒤에꺼 들어갈 수 있다?!
-    result = 0
+    #갯수가 자유롭다
+    result = 0 #초기화 선언이 없으니까 초기화 안하면 접근안됨..
     for item in ar:
         result += item
 
