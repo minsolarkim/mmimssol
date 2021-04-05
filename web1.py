@@ -12,3 +12,4 @@ soup = BeautifulSoup(page, "html.parser")
 
 #첫번째 <p>를 검색
 print( soup.find("p"))
+print("aaa")
