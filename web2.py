@@ -32,4 +32,4 @@ for item in cartoons:
     print(title)
     f.write(title.strip() + "\n")
 
-f.close()
+f.close() #까먹으면 안됨!
