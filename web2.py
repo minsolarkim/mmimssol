@@ -25,11 +25,11 @@ print(link)
 #반복구문
 print("====반복구문====")
 #파일로저장
-f = open("c:\\work\\webtoon.txt", "wt",encoding = "utf-8")
+f = open("c:\\work2\\webtoon.txt", "wt",encoding = "utf-8")
 #한글이 들어갔으니까 인코딩 지정해줘야 안 깨짐
 for item in cartoons:
     title = item.find("a").text
     print(title)
     f.write(title.strip() + "\n")
-    
+
 f.close()
