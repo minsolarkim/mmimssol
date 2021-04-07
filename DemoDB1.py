@@ -16,6 +16,18 @@ cur.execute("create table PhoneBook (Name text, PhoneNum test);")
 #1건 입력
 cur.execute("insert into PhoneBook values ('derick', '010-111');")
 
+#입력 파라메터 처리(python format {0},{1})
+#텍스트박스(GUI, Web Page)에서 입력을 받아서 처리
+
+name = "ona"
+phoneNumber = "010-999"
+cur.execute("insert into PhoneBook values (?, ?);", (name, phoneNumber))
+
+#다중의 레코드(행, row)를 입력받는 경우 : 2차원 행열데이터
+datalist = (("tom", "010-123"), ("dsp", "010-567"))
+cur.executemany("insert into PhoneBook values (?, ?);", datalist)
+#이 때 executemany를 사용하는 구만!!
+
 #검색
 cur.execute("select * from PhoneBook;")
 for row in cur:
